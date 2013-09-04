@@ -72,9 +72,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSInteger row = 1;
-    NSInteger section = 2;
-    self.expandedIndexPath = [NSIndexPath indexPathForRow:row inSection:section];
 }
 
 - (void)didReceiveMemoryWarning
