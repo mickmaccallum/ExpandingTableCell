@@ -14,6 +14,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+#warning This method supports multiple selection as well. Simply uncomment the line below to enable it.
+
+//	[self.tableView setAllowsMultipleSelection:YES];
 }
 
 
@@ -22,10 +26,12 @@
     // Compares the index path for the current cell to the index path stored in the expanded
     // index path variable. If the two match, return a height of 100 points, otherwise return
     // a height of 44 points.
+	if ([tableView indexPathsForSelectedRows].count > 0) {
+		if ([[tableView indexPathsForSelectedRows] indexOfObject:indexPath] != NSNotFound) {
+			return 100.0; // Expanded height
+		}
+	}
 
-    if ([indexPath compare:[tableView indexPathForSelectedRow]] == NSOrderedSame) {
-        return 100.0; // Expanded height
-    }
     return 44.0; // Normal height
 }
 
