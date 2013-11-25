@@ -2,6 +2,12 @@
 
 #import "ViewController.h"
 
+static NSInteger numberOfSections = 100;
+static NSInteger numberOfRowsInSection = 3;
+
+static CGFloat expandedHeight = 100.0;
+static CGFloat contractedHeight = 44.0;
+
 @interface ViewController () < UITableViewDataSource, UITableViewDelegate >
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -15,39 +21,38 @@
 {
     [super viewDidLoad];
 
-#warning This method supports multiple selection as well. Simply uncomment the line below to enable it.
-
-//	[self.tableView setAllowsMultipleSelection:YES];
+	[self.tableView setAllowsMultipleSelection:YES];
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Compares the index path for the current cell to the index path stored in the expanded
-    // index path variable. If the two match, return a height of 100 points, otherwise return
-    // a height of 44 points.
-	if ([tableView indexPathsForSelectedRows].count > 0) {
+	if ([tableView indexPathsForSelectedRows].count) {
+        
 		if ([[tableView indexPathsForSelectedRows] indexOfObject:indexPath] != NSNotFound) {
-			return 100.0; // Expanded height
+			return expandedHeight; // Expanded height
 		}
+        
+        return contractedHeight; // Normal height
 	}
 
-    return 44.0; // Normal height
+    return contractedHeight; // Normal height
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return numberOfRowsInSection;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return numberOfSections;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"CELLID";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
 
     return cell;
@@ -55,16 +60,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView beginUpdates]; // tell the table you're about to start making changes
-
-    [tableView endUpdates]; // tell the table you're done making your changes
+    [self updateTableView];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[tableView beginUpdates]; // tell the table you're about to start making changes
+    [self updateTableView];
+}
 
-    [tableView endUpdates]; // tell the table you're done making your changes
+- (void)updateTableView
+{
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
 }
 
 - (void)didReceiveMemoryWarning
