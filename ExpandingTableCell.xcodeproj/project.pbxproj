@@ -14,13 +14,15 @@
 		0072FD0017D7960F00EAFBC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072FCFF17D7960F00EAFBC4 /* main.m */; };
 		0072FD0417D7960F00EAFBC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072FD0317D7960F00EAFBC4 /* AppDelegate.m */; };
 		0072FD0717D7960F00EAFBC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0072FD0517D7960F00EAFBC4 /* Main.storyboard */; };
-		0072FD0A17D7960F00EAFBC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072FD0917D7960F00EAFBC4 /* ViewController.m */; };
+		0072FD0A17D7960F00EAFBC4 /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072FD0917D7960F00EAFBC4 /* ObjCViewController.m */; };
 		0072FD0C17D7960F00EAFBC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0072FD0B17D7960F00EAFBC4 /* Images.xcassets */; };
 		0072FD1317D7960F00EAFBC4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0072FD1217D7960F00EAFBC4 /* XCTest.framework */; };
 		0072FD1417D7960F00EAFBC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0072FCF317D7960F00EAFBC4 /* Foundation.framework */; };
 		0072FD1517D7960F00EAFBC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0072FCF717D7960F00EAFBC4 /* UIKit.framework */; };
 		0072FD1D17D7960F00EAFBC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0072FD1B17D7960F00EAFBC4 /* InfoPlist.strings */; };
 		0072FD1F17D7960F00EAFBC4 /* ExpandingTableCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0072FD1E17D7960F00EAFBC4 /* ExpandingTableCellTests.m */; };
+		00C51EB71C42D2F200DB99B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C51EB61C42D2F200DB99B7 /* Launch Screen.storyboard */; };
+		00C51EBA1C42D45400DB99B7 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C51EB91C42D45400DB99B7 /* SwiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,17 @@
 		0072FD0217D7960F00EAFBC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0072FD0317D7960F00EAFBC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0072FD0617D7960F00EAFBC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0072FD0817D7960F00EAFBC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0072FD0917D7960F00EAFBC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0072FD0817D7960F00EAFBC4 /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
+		0072FD0917D7960F00EAFBC4 /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		0072FD0B17D7960F00EAFBC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0072FD1117D7960F00EAFBC4 /* ExpandingTableCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpandingTableCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0072FD1217D7960F00EAFBC4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0072FD1A17D7960F00EAFBC4 /* ExpandingTableCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExpandingTableCellTests-Info.plist"; sourceTree = "<group>"; };
 		0072FD1C17D7960F00EAFBC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0072FD1E17D7960F00EAFBC4 /* ExpandingTableCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandingTableCellTests.m; sourceTree = "<group>"; };
+		00C51EB61C42D2F200DB99B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		00C51EB81C42D45400DB99B7 /* ExpandingTableCell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpandingTableCell-Bridging-Header.h"; sourceTree = "<group>"; };
+		00C51EB91C42D45400DB99B7 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +120,13 @@
 				0072FD0217D7960F00EAFBC4 /* AppDelegate.h */,
 				0072FD0317D7960F00EAFBC4 /* AppDelegate.m */,
 				0072FD0517D7960F00EAFBC4 /* Main.storyboard */,
-				0072FD0817D7960F00EAFBC4 /* ViewController.h */,
-				0072FD0917D7960F00EAFBC4 /* ViewController.m */,
+				0072FD0817D7960F00EAFBC4 /* ObjCViewController.h */,
+				0072FD0917D7960F00EAFBC4 /* ObjCViewController.m */,
+				00C51EB91C42D45400DB99B7 /* SwiftViewController.swift */,
 				0072FD0B17D7960F00EAFBC4 /* Images.xcassets */,
+				00C51EB61C42D2F200DB99B7 /* Launch Screen.storyboard */,
 				0072FCFA17D7960F00EAFBC4 /* Supporting Files */,
+				00C51EB81C42D45400DB99B7 /* ExpandingTableCell-Bridging-Header.h */,
 			);
 			path = ExpandingTableCell;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 		0072FCE817D7960F00EAFBC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "HappTech Development";
 				TargetAttributes = {
@@ -230,6 +239,7 @@
 			files = (
 				0072FD0C17D7960F00EAFBC4 /* Images.xcassets in Resources */,
 				0072FCFE17D7960F00EAFBC4 /* InfoPlist.strings in Resources */,
+				00C51EB71C42D2F200DB99B7 /* Launch Screen.storyboard in Resources */,
 				0072FD0717D7960F00EAFBC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0072FD0A17D7960F00EAFBC4 /* ViewController.m in Sources */,
+				00C51EBA1C42D45400DB99B7 /* SwiftViewController.swift in Sources */,
+				0072FD0A17D7960F00EAFBC4 /* ObjCViewController.m in Sources */,
 				0072FD0417D7960F00EAFBC4 /* AppDelegate.m in Sources */,
 				0072FD0017D7960F00EAFBC4 /* main.m in Sources */,
 			);
@@ -374,10 +385,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpandingTableCell/ExpandingTableCell-Prefix.pch";
 				INFOPLIST_FILE = "ExpandingTableCell/ExpandingTableCell-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandingTableCell/ExpandingTableCell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -387,10 +402,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpandingTableCell/ExpandingTableCell-Prefix.pch";
 				INFOPLIST_FILE = "ExpandingTableCell/ExpandingTableCell-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandingTableCell/ExpandingTableCell-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,6 +472,7 @@
 				0072FD2417D7960F00EAFBC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0072FD2517D7960F00EAFBC4 /* Build configuration list for PBXNativeTarget "ExpandingTableCellTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +481,7 @@
 				0072FD2717D7960F00EAFBC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

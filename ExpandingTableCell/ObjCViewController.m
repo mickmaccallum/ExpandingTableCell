@@ -1,20 +1,12 @@
 
 
-#import "ViewController.h"
+#import "ObjCViewController.h"
 
-static NSInteger numberOfSections = 100;
-static NSInteger numberOfRowsInSection = 3;
-
-static CGFloat expandedHeight = 100.0;
-static CGFloat contractedHeight = 44.0;
-
-@interface ViewController () < UITableViewDataSource, UITableViewDelegate >
-
+@interface ObjCViewController () < UITableViewDataSource, UITableViewDelegate >
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
-@implementation ViewController
+@implementation ObjCViewController
 
 
 - (void)viewDidLoad
@@ -24,36 +16,36 @@ static CGFloat contractedHeight = 44.0;
 	[self.tableView setAllowsMultipleSelection:YES];
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if ([tableView indexPathsForSelectedRows].count) {
-        
-		if ([[tableView indexPathsForSelectedRows] indexOfObject:indexPath] != NSNotFound) {
-			return expandedHeight; // Expanded height
-		}
-        
-        return contractedHeight; // Normal height
-	}
+    NSArray<NSIndexPath *> *selectedRows = [tableView indexPathsForSelectedRows];
+    if (selectedRows && [selectedRows containsObject:indexPath]) {
 
-    return contractedHeight; // Normal height
+        return 100.0; // Expanded height
+    }
+
+    return 44.0; // Normal height
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return numberOfRowsInSection;
+    return 3;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return numberOfSections;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"CELLID";
+    static NSString *cellID = @"ObjCCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID
+                                                            forIndexPath:indexPath];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"row %li", (long)indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"section %li", (long)indexPath.section];
 
     return cell;
 }
